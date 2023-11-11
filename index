@@ -1,0 +1,41 @@
+from time import sleep
+print('--'*30)
+print('\033[1mESCOLHA DOIS VALORES E DIGITE A OPÇÃO QUE DESEJA REALIZAR\033[m')
+print('--'*30)
+print()
+v1 = int(input('Digite o primeiro valor: '))
+v2 = int(input('Segundo valor: '))
+print(f'Ok, voce escolheu {v1} e {v2}, agora escolha a opção que deseja realisazer !!')
+sleep(1)
+opção = 0
+while opção != 5:
+    print('''[1] SOMAR
+[2] MULTIPLICADOR
+[3] MAIOR
+[4] NOVOS NÚMEROS
+[5] SAIR DO PROGAMA''')
+    opção = int(input('Escolha a opção desejada: '))
+    if opção == 1:
+        soma = v1 + v2
+        print(f'A soma entre {v1} e {v2} é {soma}.')
+    elif opção == 2:
+        mult = v1 * v2
+        print(f'A multiplicação entre {v1} e {v2} é {mult}.')
+    elif opção == 3:
+        if v1 > v2:
+            maior = v1
+        else:
+            maior = v2
+            print(f'Entre {v1} e {v2} o maior valor é {maior}')
+    elif opção == 4:
+        print('Informe os novos valores:')
+        v1 = int(input('Digite o primeiro valor: '))
+        v2 = int(input('Segundo valor: '))
+    elif opção == 5:
+        print('FINALIZANDO...')
+        sleep(2)
+    else:
+        print('Opçao inválida, tente novamente.')
+    print('//-//'*10)
+    sleep(2)
+print('PROGAMA ENCERRADO!')
